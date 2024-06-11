@@ -1,23 +1,23 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class Author extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
-  }
-  Author.init({
-    name: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'Author',
-  });
-  return Author;
-};
+require('dotenv').config();
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/database');
+
+
+const Author = sequelize.define('Author',
+  {
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    authorID: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      primaryKey: true,
+      unique: true,
+    },
+  },
+
+);
+Author.sync({ alter: true });
+
+module.exports = Author;
