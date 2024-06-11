@@ -9,7 +9,6 @@ This is a basic library management system built using Node.js, Express.js, Postg
 - [Installation](#installation)
 - [Database Setup](#database-setup)
 - [Running the Project](#running-the-project)
-- [Project Structure](#project-structure)
 - [API Endpoints](#api-endpoints)
 - [Technologies Used](#technologies-used)
 
@@ -66,13 +65,13 @@ The server will start on port 3000 by default.
 
 ## API Endpoints
 
-### Users
+### Authors
 
-- **GET /users**
-    - Description: Get all users
-    - Response: Array of user objects
+- **GET /authors**
+    - Description: Get all authors
+    - Response: An object with data, message and status
 
-- **POST /users**
+- **POST /authors/create**
     - Description: Create a new user
     - Body:
         ```json
@@ -87,22 +86,32 @@ The server will start on port 3000 by default.
 
 - **GET /books**
     - Description: Get all books
-    - Response: Array of book objects
+    - Response: An object with data, message and status
 
-- **POST /books**
+- **POST /books/create**
     - Description: Create a new book
     - Body:
         ```json
         {
-          "title": "Book Title",
-          "author": "Author Name",
-          "genre": "Genre",
-          "year": 2024,
-          "userId": 1
+            "title": "The DEChemist",
+            "authorID": "AU872",
+            "publishedDate": "1988-01-01",
+            "isbn": "9780062315009"
         }
         ```
-    - Response: Created book object
+    - Response: An object with data, message and status
 
+### Loans
+- **GET /loans**
+    - Description: Get all Loans
+    - Response: An object with data, message and status
+- **POST /loans/create**
+    - Description: Create a new Loan
+    - Body:
+        ```json
+        Coming soon
+        ```
+    - Response: An object with data, message and status
 ## Technologies Used
 
 - [Node.js](https://nodejs.org/)
