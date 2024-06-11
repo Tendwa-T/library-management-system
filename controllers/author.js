@@ -3,6 +3,9 @@ const Author = require('../models/author');
 
 const createAuthor = async (req, res) => {
     const { name } = req.body;
+    if (!name || name === '') {
+        return res.status(400).json({ data: {}, message: 'Name is required', success: false });
+    }
     try {
         const existingAuthor = await Author.findOne({ where: { name } });
         if (existingAuthor) {
@@ -19,6 +22,9 @@ const createAuthor = async (req, res) => {
 const getAllAuthors = async (req, res) => {
     try {
         const authors = await Author.findAll();
+        if (authors.length === 0) {
+            return res.status(404).json({ data: {}, message: 'No Authors found', success: false });
+        }
         return res.status(200).json({ data: authors, message: 'Authors retrieved', success: true });
     } catch (error) {
         return res.status(500).json({ data: {}, message: error.message, success: false });
@@ -42,6 +48,11 @@ const getAuthorById = async (req, res) => {
 
 const updateAuthor = async (req, res) => {
     const { id } = req.params;
+    const { name } = req.body;
+
+    if (!name || name === '') {
+        return res.status(400).json({ data: {}, message: 'Name is required', success: false });
+    }
     try {
         const [updated] = await Author.update(req.body, {
             where: { authorID: id }

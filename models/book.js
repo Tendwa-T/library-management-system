@@ -1,26 +1,34 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class Book extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
-  }
-  Book.init({
-    title: DataTypes.STRING,
-    authorId: DataTypes.INTEGER,
-    isbn: DataTypes.STRING,
-    publishedDate: DataTypes.DATE
-  }, {
-    sequelize,
-    modelName: 'Book',
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/database');
+
+const Book = sequelize.define('Book',
+  {
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    authorID: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    isbn: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      primaryKey: true,
+      unique: true,
+    },
+    publishedDate: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
   });
-  return Book;
-};
+
+Book.associations = (models) => {
+  Book.belongsTo(models.Author, {
+    foreignKey: 'author',
+  });
+}
+
+Book.sync({ alter: true });
+
+module.exports = Book;
