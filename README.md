@@ -165,6 +165,46 @@ Some endpoints are protected to ensure only users of the system (Employees of th
     - Disclaimer: 
         - Can only be carried out by a valid user
 
+### Users
+- **POST /users/register**
+    - Description: Register a new user
+    - Body:
+        ```json
+        {
+            "firstName":"Duffy",
+            "lastName":"Duck",
+            "email":"duffy@duck.com",
+            "username":"duffy",
+            "password":"password"
+        }
+        ```
+    - Response: An object with data, message and status
+    
+- **POST /users/login**
+    - Description: Login a user
+    - Body:
+        ```json
+        {
+            "username":"duffy",
+            "password":"password"
+        }
+        ```
+    - Response: An object with data, message and status
+
+- **GET /users**
+    - Description: Get all users
+    - Response: An object with data, message and status
+
+## Tests
+Tests are written using Jest. To run the tests, run:
+```bash
+npm test
+```
+### Disclaimer
+- Tests occur asynchronously and may fail if the database is not empty. The tests, when triggered, run on the development database to make debugging easier. The tests clear the database before running to ensure that the database is empty before running the tests.
+- Some tests may fail because of the amount of open connections to the database. This is a known issue with the Sequelize ORM. In the case of a failure of a test, run the individual test on its own before making modifications. The tests are written to ensure that the functionality of the API is working as expected.
+
+
 ## Technologies Used
 
 - [Node.js](https://nodejs.org/)
@@ -172,3 +212,4 @@ Some endpoints are protected to ensure only users of the system (Employees of th
 - [PostgreSQL](https://www.postgresql.org/)
 - [Sequelize](https://sequelize.org/)
 - [Nodemon](https://nodemon.io/)
+- [Jest](https://jestjs.io/)
