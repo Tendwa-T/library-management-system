@@ -10,6 +10,8 @@ This is a basic library management system built using Node.js, Express.js, Postg
 - [Database Setup](#database-setup)
 - [Running the Project](#running-the-project)
 - [API Endpoints](#api-endpoints)
+- [Tests](#tests)
+    - [Disclaimer](#disclaimer)
 - [Technologies Used](#technologies-used)
 
 ## Prerequisites
