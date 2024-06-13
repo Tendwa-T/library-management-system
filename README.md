@@ -215,3 +215,4 @@ npm test
 - [Sequelize](https://sequelize.org/)
 - [Nodemon](https://nodemon.io/)
 - [Jest](https://jestjs.io/)
+- [Winston](https://github.com/winstonjs/winston#readme)
