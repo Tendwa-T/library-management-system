@@ -1,5 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
+const Loan = require('./loan');
 
 const Member = sequelize.define('Member',
     {
@@ -28,12 +29,5 @@ const Member = sequelize.define('Member',
     }
 );
 
-Member.associations = (models) => {
-    Member.hasMany(models.Loan, {
-        foreignKey: 'memberID',
-    });
-}
-
-Member.sync({ alter: true });
 
 module.exports = Member;

@@ -1,5 +1,8 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
+const Book = require('./book');
+const Member = require('./member');
+
 
 const Loan = sequelize.define('Loan',
   {
@@ -44,15 +47,5 @@ const Loan = sequelize.define('Loan',
   }
 );
 
-Loan.associations = (models) => {
-  Loan.belongsTo(models.Member, {
-    foreignKey: 'memberID',
-  });
-  Loan.belongsTo(models.Book, {
-    foreignKey: 'isbn',
-  });
-}
-
-Loan.sync({ alter: true });
 
 module.exports = Loan;

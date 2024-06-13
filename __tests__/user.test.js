@@ -24,7 +24,7 @@ const mockUserB = {
 
 
 // Test to get all users
-describe('GET /users', () => {
+describe('System User Endpoints', () => {
     let token;
     beforeAll(async () => {
         await sequelize.sync({ force: true });
@@ -67,22 +67,6 @@ describe('GET /users', () => {
         console.log(response.body);
     })
 
-    afterAll(async () => {
-        await sequelize.close();
-    });
-}
-);
-
-// Test to Create a User
-describe('POST /create', () => {
-    let token;
-    beforeAll(async () => {
-        await sequelize.sync({ force: true });
-        const user = await User.create(mockUser);
-        token = generateToken(user);
-
-    });
-
     it('should create a new User', async () => {
         const response = await request(app)
             .post('/users/create')
@@ -121,21 +105,6 @@ describe('POST /create', () => {
         console.log(response.body);
     });
 
-    afterAll(async () => {
-        await sequelize.close();
-    });
-});
-
-
-// Test to get a user by username
-describe('GET /:username', () => {
-    let token;
-    beforeAll(async () => {
-        await sequelize.sync({ force: true });
-        const user = await User.create(mockUser);
-        token = generateToken(user);
-    });
-
     it('should return 200 if the user is found', async () => {
         const response = await request(app)
             .get('/users/Tendwa')
@@ -158,20 +127,6 @@ describe('GET /:username', () => {
         console.log(response.body);
     });
 
-    afterAll(async () => {
-        await sequelize.close();
-    });
-});
-
-// Test to Update a User
-describe('PUT /:username', () => {
-    let token;
-    beforeAll(async () => {
-        await sequelize.sync({ force: true });
-        const user = await User.create(mockUser);
-        token = generateToken(user);
-    });
-
     it('should update a user', async () => {
         const response = await request(app)
             .put('/users/Tendwa')
@@ -191,22 +146,6 @@ describe('PUT /:username', () => {
             .put('/users/Tendwa')
             .set('Authorization', `${token}`)
             .send({ firstName: "Tirus", lastName: "Tendwa", email: "tend@wawa.com", username: "Tendwa@", password: "admin" })
-    });
-
-    afterAll(async () => {
-        await sequelize.close();
-    });
-
-});
-
-// Test to Delete a User
-
-describe('DELETE /:username', () => {
-    let token;
-    beforeAll(async () => {
-        await sequelize.sync({ force: true });
-        const user = await User.create(mockUser);
-        token = generateToken(user);
     });
 
     it('should delete a user', async () => {
@@ -234,4 +173,7 @@ describe('DELETE /:username', () => {
     afterAll(async () => {
         await sequelize.close();
     });
+
+
+
 });

@@ -3,7 +3,7 @@ const { createUser, getAllUsers, getUserByUsername, updateUser, deleteUser, logi
 const { verifyToken } = require('../middleware/auth');
 const router = express.Router();
 
-router.post('/create', verifyToken, createUser);
+router.post('/create', createUser);
 router.post('/login', loginUser);
 router.post('/logout', logoutUser);
 router.get('/', verifyToken, getAllUsers);

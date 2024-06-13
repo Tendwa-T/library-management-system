@@ -1,10 +1,10 @@
-const Author = require('../models/author');
+const { Author } = require('../models/index');
 const logger = require('../utils/logger');
 
 const nameRegex = /^[a-zA-Z0-9]+$/;
 
 const createAuthor = async (req, res) => {
-    const { firstName, lastName, authorID } = req.body;
+    const { firstName, lastName } = req.body;
     const { username, isAdmin } = req.user;
 
     if (!isAdmin) {
@@ -23,7 +23,7 @@ const createAuthor = async (req, res) => {
         if (existingAuthor) {
             return res.status(409).json({ data: {}, message: 'Author already exists', success: false });
         }
-        const newAuthor = await Author.create({ firstName, lastName, authorID });
+        const newAuthor = await Author.create({ firstName, lastName, authorID: 'AU-' + Math.floor(Math.random() * 10000) });
         return res.status(201).json({ data: newAuthor, message: 'Author created', success: true });
     }
     catch (error) {

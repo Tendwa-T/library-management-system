@@ -1,5 +1,5 @@
 require('dotenv').config();
-const User = require('../models/user');
+const { User } = require('../models/index');
 const { generateToken } = require('../middleware/auth');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -14,11 +14,11 @@ const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 const createUser = async (req, res) => {
 
     const { firstName, lastName, email, username, password, isAdmin } = req.body;
-    const { username: adminUsername, isAdmin: adminIsAdmin } = req.user;
-    if (!adminIsAdmin) {
-        logger.error(`Unauthorized access request by ${adminUsername}`);
-        return res.status(403).json({ data: {}, message: 'Unauthorized', success: false });
-    }
+    /*     const { username: adminUsername, isAdmin: adminIsAdmin } = req.user;
+        if (!adminIsAdmin) {
+            logger.error(`Unauthorized access request by ${adminUsername}`);
+            return res.status(403).json({ data: {}, message: 'Unauthorized', success: false });
+        } */
 
     if (!firstName || firstName === '' || !lastName || lastName === '' || !email || email === '' || !username || username === '' || !password || password === '') {
         return res.status(400).json({ data: {}, message: 'All fields are required', success: false });

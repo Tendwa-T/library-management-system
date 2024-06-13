@@ -327,3 +327,499 @@
 2024-06-13T00:03:44.628Z [32minfo[39m: User Tendwa updated
 2024-06-13T00:04:25.795Z [32minfo[39m: Server running on port 8000
 2024-06-13T00:04:33.591Z [32minfo[39m: User Tendwa deleted
+2024-06-13T00:09:15.416Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:09:17.969Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:09:24.004Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:09:24.031Z [32minfo[39m: Book created
+2024-06-13T00:09:28.773Z [32minfo[39m: Author with ID AU035 deleted by Tendwa
+2024-06-13T00:09:40.528Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:09:42.442Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:09:42.490Z [32minfo[39m: Book created
+2024-06-13T00:09:46.383Z [32minfo[39m: Author with ID AU035 deleted by Tendwa
+2024-06-13T00:09:48.517Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:09:54.632Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:09:57.053Z [32minfo[39m: Author with ID AU035 deleted by Tendwa
+2024-06-13T00:09:58.521Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:09:58.538Z [32minfo[39m: Book created
+2024-06-13T00:10:01.931Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:10:07.755Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:10:09.290Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:10:09.315Z [32minfo[39m: Book created
+2024-06-13T00:10:11.517Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:10:13.968Z [32minfo[39m: Author with ID AU035 deleted by Tendwa
+2024-06-13T00:12:19.320Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:12:19.880Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:12:19.913Z [32minfo[39m: Book created
+2024-06-13T00:12:24.396Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:12:27.315Z [32minfo[39m: Author with ID AU035 deleted by Tendwa
+2024-06-13T00:12:29.837Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:13:40.485Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:13:45.098Z [32minfo[39m: Author with ID AU035 deleted by Tendwa
+2024-06-13T00:13:47.794Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:13:51.268Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:13:51.854Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:13:51.877Z [32minfo[39m: Book created
+2024-06-13T00:17:17.003Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:17:17.582Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:17:17.606Z [32minfo[39m: Book created
+2024-06-13T00:17:22.565Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:17:27.294Z [32minfo[39m: Author with ID AU035 deleted by Tendwa
+2024-06-13T00:17:30.265Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:18:18.527Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:18:19.098Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:18:19.133Z [32minfo[39m: Book created
+2024-06-13T00:18:25.213Z [32minfo[39m: Author with ID AU035 deleted by Tendwa
+2024-06-13T00:18:28.135Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:18:31.318Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:19:07.709Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:19:08.094Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:19:08.115Z [32minfo[39m: Book created
+2024-06-13T00:19:11.383Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T00:19:13.549Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:19:16.864Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:22:10.031Z [32minfo[39m: Server running on port 8000
+2024-06-13T00:23:32.433Z [32minfo[39m: Server running on port 8000
+2024-06-13T00:23:35.627Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:23:36.179Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T00:23:36.222Z [32minfo[39m: Book created
+2024-06-13T00:23:40.318Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:25:22.614Z [32minfo[39m: Server running on port 8000
+2024-06-13T00:26:48.573Z [32minfo[39m: Server running on port 8000
+2024-06-13T00:27:51.969Z [32minfo[39m: Server running on port 8000
+2024-06-13T00:29:05.514Z [32minfo[39m: Server running on port 8000
+2024-06-13T00:29:51.209Z [32minfo[39m: Server running on port 8000
+2024-06-13T00:30:26.474Z [32minfo[39m: Server running on port 8000
+2024-06-13T00:34:03.259Z [32minfo[39m: Server running on port 8000
+2024-06-13T00:34:35.106Z [32minfo[39m: Server running on port 8000
+2024-06-13T00:35:05.964Z [32minfo[39m: User Tendwa created
+2024-06-13T00:36:15.350Z [32minfo[39m: Server running on port 8000
+2024-06-13T00:36:24.995Z [32minfo[39m: Server running on port 8000
+2024-06-13T00:37:04.997Z [32minfo[39m: User Tendwa logged in
+2024-06-13T00:37:32.612Z [32minfo[39m: User Ben10 created
+2024-06-13T00:37:54.614Z [32minfo[39m: User Spiderman created
+2024-06-13T00:38:50.182Z [31merror[39m: notNull Violation: Author.authorID cannot be null
+2024-06-13T00:43:37.516Z [32minfo[39m: Server running on port 8000
+2024-06-13T00:44:36.752Z [32minfo[39m: Server running on port 8000
+2024-06-13T00:45:36.251Z [32minfo[39m: Server running on port 8000
+2024-06-13T00:49:52.170Z [32minfo[39m: Book Johnny Bravo the Book created by Tendwa
+2024-06-13T00:50:14.072Z [32minfo[39m: Book Johnny Bravo the Book Part 2 created by Tendwa
+2024-06-13T00:51:01.277Z [32minfo[39m: Book Looney Tunes created by Tendwa
+2024-06-13T00:51:12.305Z [32minfo[39m: Book Looney Tunes The Sequel created by Tendwa
+2024-06-13T00:51:24.099Z [32minfo[39m: Book Looney Tunes The Sequel 2 created by Tendwa
+2024-06-13T00:54:59.980Z [32minfo[39m: Server running on port 8000
+2024-06-13T09:38:36.300Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T09:38:38.799Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T09:38:42.760Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T09:38:46.150Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T09:38:46.574Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T09:38:46.602Z [32minfo[39m: Book created
+2024-06-13T11:26:16.329Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T11:26:18.401Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:26:18.842Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:26:18.863Z [32minfo[39m: Book created
+2024-06-13T11:26:21.966Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T11:26:23.680Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:27:05.400Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T11:27:09.566Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:27:10.370Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:27:10.397Z [32minfo[39m: Book created
+2024-06-13T11:27:15.731Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:27:19.898Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T11:28:55.846Z [32minfo[39m: Author with ID AU035 deleted by Tendwa
+2024-06-13T11:32:09.783Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:32:20.257Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:32:28.582Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:32:56.277Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:32:56.533Z [32minfo[39m: Loan with Member ID MB-920 and Book ISBN 9780062315007 deleted by Tendwa
+2024-06-13T11:34:54.307Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T11:34:54.388Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T11:34:54.693Z [32minfo[39m: Loan with Member ID MB-818 and Book ISBN 9780062315080 deleted by Tendwa
+2024-06-13T11:34:54.730Z [32minfo[39m: Loan with Member ID MB-818 and Book ISBN 9780062315090 deleted by Tendwa
+2024-06-13T11:35:02.419Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:35:10.175Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:35:10.349Z [32minfo[39m: Loan with Member ID MB-646 and Book ISBN 9780062315007 deleted by Tendwa
+2024-06-13T11:35:16.724Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T11:35:26.032Z [32minfo[39m: User JackieChan created
+2024-06-13T11:35:43.181Z [32minfo[39m: User Tendwa updated
+2024-06-13T11:35:50.332Z [32minfo[39m: User Tendwa deleted
+2024-06-13T11:44:29.682Z [32minfo[39m: Server running on port 8000
+2024-06-13T11:57:00.695Z [32minfo[39m: Server running on port 8000
+2024-06-13T11:57:02.447Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T11:57:03.442Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:57:05.387Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T11:57:06.897Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:57:07.177Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:57:07.202Z [32minfo[39m: Book created
+2024-06-13T11:57:10.445Z [32minfo[39m: Server running on port 8000
+2024-06-13T11:57:12.126Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T11:57:13.149Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:57:13.347Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:57:13.359Z [32minfo[39m: Book created
+2024-06-13T11:57:14.878Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T11:57:16.030Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:58:35.408Z [32minfo[39m: Server running on port 8000
+2024-06-13T11:58:37.132Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T11:58:38.089Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:58:38.256Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:58:38.266Z [32minfo[39m: Book created
+2024-06-13T11:58:39.668Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:58:40.992Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T11:58:51.603Z [32minfo[39m: Server running on port 8000
+2024-06-13T11:58:52.791Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T11:58:53.958Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:58:54.171Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:58:54.184Z [32minfo[39m: Book created
+2024-06-13T11:58:56.110Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T11:58:57.407Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:59:20.130Z [32minfo[39m: Server running on port 8000
+2024-06-13T11:59:21.432Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T11:59:22.267Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:59:22.427Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:59:22.435Z [32minfo[39m: Book created
+2024-06-13T11:59:24.194Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T11:59:25.458Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T11:59:36.231Z [31merror[39m: Member is not associated to Loan!
+2024-06-13T12:03:59.815Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:04:01.257Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:04:02.478Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:04:02.701Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:04:02.714Z [32minfo[39m: Book created
+2024-06-13T12:04:04.160Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:04:05.132Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:07:09.377Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:07:10.707Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:07:12.278Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:07:12.786Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:07:12.810Z [32minfo[39m: Book created
+2024-06-13T12:07:14.853Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:07:15.770Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:07:25.450Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:07:26.988Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:07:27.196Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:07:27.210Z [32minfo[39m: Book created
+2024-06-13T12:07:28.850Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:07:30.194Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:07:31.284Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:09:14.859Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:09:16.244Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:09:16.414Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:09:16.422Z [32minfo[39m: Book created
+2024-06-13T12:09:17.628Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:09:18.678Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:09:19.633Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:09:40.951Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:09:42.326Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:09:42.496Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:09:42.504Z [32minfo[39m: Book created
+2024-06-13T12:09:43.828Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:09:45.031Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:09:46.586Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:10:23.582Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:10:24.836Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:10:25.073Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:10:25.085Z [32minfo[39m: Book created
+2024-06-13T12:10:27.141Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:10:27.856Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:10:28.864Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:10:30.178Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:10:33.151Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:10:34.474Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:10:34.761Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:10:34.776Z [32minfo[39m: Book created
+2024-06-13T12:10:36.638Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:10:37.889Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:10:38.633Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:10:40.044Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:10:40.074Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:10:52.250Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:10:53.026Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:10:53.224Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:10:53.237Z [32minfo[39m: Book created
+2024-06-13T12:10:54.566Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:10:55.439Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:10:56.211Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:11:45.787Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:11:46.870Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:11:47.059Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:11:47.070Z [32minfo[39m: Book created
+2024-06-13T12:11:48.710Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:11:49.694Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:11:50.591Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:13:39.598Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:13:40.842Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:13:41.060Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:13:41.079Z [32minfo[39m: Book created
+2024-06-13T12:13:42.662Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:13:43.878Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:13:45.191Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:13:53.358Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:13:54.339Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:13:54.588Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:13:54.602Z [32minfo[39m: Book created
+2024-06-13T12:13:56.336Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:13:57.670Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:13:58.592Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:14:27.345Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:14:28.856Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:14:29.170Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:14:29.188Z [32minfo[39m: Book created
+2024-06-13T12:14:31.127Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:14:32.620Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:14:33.571Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:15:30.865Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:15:31.999Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:15:33.697Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:15:34.117Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:15:34.966Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:15:35.184Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:15:35.195Z [32minfo[39m: Book created
+2024-06-13T12:15:37.116Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:15:40.756Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:15:41.739Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:15:42.778Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:15:43.803Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:15:44.011Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:15:44.029Z [32minfo[39m: Book created
+2024-06-13T12:15:45.505Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:19:55.543Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:19:56.518Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:19:57.308Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:19:57.524Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:19:57.534Z [32minfo[39m: Book created
+2024-06-13T12:19:58.715Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:19:59.115Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:20:00.398Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:20:09.584Z [32minfo[39m: User Spiderman created
+2024-06-13T12:21:57.316Z [32minfo[39m: User Tendwa created
+2024-06-13T12:22:02.187Z [32minfo[39m: User Tendwa logged in
+2024-06-13T12:23:51.171Z [32minfo[39m: Book Looney Tunes The Sequel 2 created by Tendwa
+2024-06-13T12:24:10.036Z [32minfo[39m: Book Night and Day created by Tendwa
+2024-06-13T12:24:23.575Z [32minfo[39m: Book Jazz Fest created by Tendwa
+2024-06-13T12:24:57.885Z [32minfo[39m: Book Jazz Fest 2 created by Tendwa
+2024-06-13T12:25:05.249Z [32minfo[39m: Book Jazz Fest 3 created by Tendwa
+2024-06-13T12:25:31.106Z [32minfo[39m: Book Thursday Afternoon created by Tendwa
+2024-06-13T12:31:13.581Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:31:14.500Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:31:15.273Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:31:15.428Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:31:15.436Z [32minfo[39m: Book created
+2024-06-13T12:31:16.502Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T12:31:17.411Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:31:49.453Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:36:28.331Z [32minfo[39m: User Tendwa created
+2024-06-13T12:36:34.794Z [32minfo[39m: User Tendwa logged in
+2024-06-13T12:39:37.468Z [32minfo[39m: Book Thursday Afternoon created by Tendwa
+2024-06-13T12:39:45.735Z [32minfo[39m: Book Friday Afternoon created by Tendwa
+2024-06-13T12:39:56.047Z [32minfo[39m: Book Saturday Afternoon created by Tendwa
+2024-06-13T12:40:27.948Z [32minfo[39m: Book Janurary created by Tendwa
+2024-06-13T12:40:35.643Z [32minfo[39m: Book February created by Tendwa
+2024-06-13T12:44:21.688Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:44:30.289Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:49:41.566Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:53:08.425Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:57:36.701Z [32minfo[39m: Server running on port 8000
+2024-06-13T12:59:31.270Z [31merror[39m: Validation error
+2024-06-13T13:07:32.338Z [32minfo[39m: Server running on port 8000
+2024-06-13T13:10:13.837Z [32minfo[39m: Server running on port 8000
+2024-06-13T13:10:29.119Z [32minfo[39m: Server running on port 8000
+2024-06-13T13:10:41.307Z [32minfo[39m: Server running on port 8000
+2024-06-13T13:10:44.630Z [32minfo[39m: Server running on port 8000
+2024-06-13T13:11:01.829Z [32minfo[39m: Server running on port 8000
+2024-06-13T13:11:40.753Z [32minfo[39m: Server running on port 8000
+2024-06-13T13:12:12.334Z [32minfo[39m: Server running on port 8000
+2024-06-13T13:12:25.547Z [32minfo[39m: Server running on port 8000
+2024-06-13T13:12:38.108Z [32minfo[39m: Server running on port 8000
+2024-06-13T13:12:50.561Z [32minfo[39m: Server running on port 8000
+2024-06-13T13:13:48.473Z [32minfo[39m: Server running on port 8000
+2024-06-13T13:18:58.606Z [32minfo[39m: Server running on port 8000
+2024-06-13T13:22:28.733Z [32minfo[39m: Server running on port 8000
+2024-06-13T13:24:38.218Z [32minfo[39m: Server running on port 8000
+2024-06-13T13:52:21.931Z [32minfo[39m: Server running on port 8000
+2024-06-13T13:55:19.677Z [32minfo[39m: Server running on port 8000
+2024-06-13T13:59:07.842Z [32minfo[39m: Server running on port 8000
+2024-06-13T14:00:05.784Z [32minfo[39m: Server running on port 8000
+2024-06-13T14:01:04.293Z [32minfo[39m: Server running on port 8000
+2024-06-13T14:01:58.652Z [32minfo[39m: Server running on port 8000
+2024-06-13T14:12:52.416Z [32minfo[39m: Server running on port 8000
+2024-06-13T16:43:25.134Z [32minfo[39m: Server running on port 8000
+2024-06-13T16:43:27.979Z [32minfo[39m: Server running on port 8000
+2024-06-13T16:44:29.999Z [32minfo[39m: Server running on port 8000
+2024-06-13T16:45:00.549Z [32minfo[39m: Server running on port 8000
+2024-06-13T16:46:13.874Z [32minfo[39m: Server running on port 8000
+2024-06-13T16:46:58.639Z [32minfo[39m: Server running on port 8000
+2024-06-13T16:47:11.031Z [32minfo[39m: Author with ID AU035 deleted by Tendwa
+2024-06-13T16:48:32.293Z [32minfo[39m: Server running on port 8000
+2024-06-13T16:49:54.983Z [32minfo[39m: Author with ID AU035 deleted by Tendwa
+2024-06-13T16:50:15.164Z [32minfo[39m: Server running on port 8000
+2024-06-13T16:51:23.903Z [32minfo[39m: Server running on port 8000
+2024-06-13T16:51:33.030Z [32minfo[39m: Author with ID AU035 deleted by Tendwa
+2024-06-13T16:52:05.063Z [32minfo[39m: Server running on port 8000
+2024-06-13T16:53:07.658Z [32minfo[39m: Server running on port 8000
+2024-06-13T16:54:29.504Z [32minfo[39m: Server running on port 8000
+2024-06-13T16:56:54.961Z [32minfo[39m: Author with ID AU035 deleted by Tendwa
+2024-06-13T16:58:19.980Z [32minfo[39m: Server running on port 8000
+2024-06-13T16:58:33.426Z [32minfo[39m: Author with ID AU035 deleted by Tendwa
+2024-06-13T17:00:13.016Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:04:27.935Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:04:37.208Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:08:50.292Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:08:59.709Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:10:11.638Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:10:59.598Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:10:59.610Z [32minfo[39m: Book created
+2024-06-13T17:13:35.874Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:16:27.886Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:17:07.704Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:19:16.202Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:19:21.151Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:20:01.413Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:20:19.611Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:21:53.247Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:22:02.087Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:22:18.005Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:22:18.090Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:22:19.007Z [32minfo[39m: Book The Alchemist created by Tendwa
+2024-06-13T17:23:40.228Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:23:52.280Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:23:52.358Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:24:06.531Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:24:06.647Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:24:19.065Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:24:28.052Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:24:28.127Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:24:46.588Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:24:55.443Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:24:55.552Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:28:22.683Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:28:52.428Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:28:52.509Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:28:52.689Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:29:49.136Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:30:01.334Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:30:01.443Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:30:01.640Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:30:24.627Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:30:33.715Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:30:33.788Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:30:33.946Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:30:50.099Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:30:59.588Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:30:59.689Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:30:59.876Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:31:09.730Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:31:18.286Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:31:18.349Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:31:18.511Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:31:26.029Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:31:34.626Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:31:34.721Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:31:34.877Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:31:35.208Z [32minfo[39m: Loan with Member ID MB-759 and Book ISBN 9780062315080 deleted by Tendwa
+2024-06-13T17:31:59.646Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:32:09.450Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:32:09.541Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:32:09.682Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:32:10.012Z [32minfo[39m: Loan with Member ID MB-259 and Book ISBN 9780062315080 deleted by Tendwa
+2024-06-13T17:32:26.256Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:32:43.148Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:32:43.234Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:32:43.397Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:32:43.657Z [32minfo[39m: Loan with Member ID MB-935 and Book ISBN 9780062315080 deleted by Tendwa
+2024-06-13T17:35:44.495Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:35:44.574Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:35:44.727Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:35:45.038Z [32minfo[39m: Loan with Member ID MB-216 and Book ISBN 9780062315080 deleted by Tendwa
+2024-06-13T17:36:06.953Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:36:18.379Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:36:18.472Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:36:18.801Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:36:42.922Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:36:58.409Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:37:09.807Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:37:09.897Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:37:10.094Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:37:10.333Z [32minfo[39m: Loan with Member ID MB-418 and Book ISBN 9780062315080 deleted by Tendwa
+2024-06-13T17:37:46.468Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:37:55.641Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:37:55.730Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:37:55.923Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:37:56.172Z [32minfo[39m: Loan with Member ID MB-230 and Book ISBN 9780062315080 deleted by Tendwa
+2024-06-13T17:38:47.815Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:38:59.547Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:38:59.630Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:38:59.783Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:39:00.018Z [32minfo[39m: Loan with Member ID MB-302 and Book ISBN 9780062315080 deleted by Tendwa
+2024-06-13T17:39:00.067Z [32minfo[39m: Loan with Member ID MB-302 and Book ISBN 9780062315090 deleted by Tendwa
+2024-06-13T17:39:13.144Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:39:23.916Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:39:24.010Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:39:24.240Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:39:24.512Z [32minfo[39m: Loan with Member ID MB-266 and Book ISBN 9780062315080 deleted by Tendwa
+2024-06-13T17:39:24.559Z [32minfo[39m: Loan with Member ID MB-266 and Book ISBN 9780062315090 deleted by Tendwa
+2024-06-13T17:40:04.470Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:40:21.312Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:40:21.398Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:40:21.558Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:40:22.139Z [32minfo[39m: Loan with Member ID MB-29 and Book ISBN 9780062315080 deleted by Tendwa
+2024-06-13T17:40:22.172Z [32minfo[39m: Loan with Member ID MB-29 and Book ISBN 9780062315090 deleted by Tendwa
+2024-06-13T17:43:13.465Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:43:36.752Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:43:54.670Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:43:54.736Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:43:54.800Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:44:11.082Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:44:11.164Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:44:11.215Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:44:11.529Z [32minfo[39m: Loan with Member ID MB-890 and Book ISBN 9780062315080 deleted by Tendwa
+2024-06-13T17:44:11.569Z [32minfo[39m: Loan with Member ID MB-890 and Book ISBN 9780062315090 deleted by Tendwa
+2024-06-13T17:44:29.845Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:44:29.932Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:44:29.990Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:46:07.521Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:46:31.023Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:46:39.516Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:46:39.587Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:46:39.638Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:47:21.359Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:47:39.730Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:47:39.852Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:47:39.894Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:49:18.751Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:49:27.045Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:49:27.106Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:49:27.145Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:49:45.192Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:49:53.466Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:49:53.574Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:49:53.653Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:49:54.051Z [32minfo[39m: Loan with Member ID MB-292 and Book ISBN 9780062315080 deleted by Tendwa
+2024-06-13T17:50:23.802Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:50:32.350Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:50:32.433Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:50:32.493Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:50:33.138Z [32minfo[39m: Loan with Member ID MB-463 and Book ISBN 9780062315080 deleted by Tendwa
+2024-06-13T17:50:33.175Z [32minfo[39m: Loan with Member ID MB-463 and Book ISBN 9780062315090 deleted by Tendwa
+2024-06-13T17:51:58.929Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:52:07.890Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:52:07.977Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:52:08.036Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:52:19.423Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:52:19.533Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:52:19.590Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:52:20.044Z [32minfo[39m: Loan with Member ID MB-810 and Book ISBN 9780062315080 deleted by Tendwa
+2024-06-13T17:52:20.152Z [32minfo[39m: Loan with Member ID MB-810 and Book ISBN 9780062315090 deleted by Tendwa
+2024-06-13T17:52:32.867Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:52:32.924Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:52:32.972Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:52:44.875Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-13T17:52:44.958Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-13T17:52:44.998Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T17:52:45.338Z [32minfo[39m: Loan with Member ID MB-759 and Book ISBN 9780062315080 deleted by Tendwa
+2024-06-13T17:54:38.894Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:55:56.680Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:56:37.441Z [32minfo[39m: Server running on port 8000
+2024-06-13T17:56:45.747Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T17:58:55.047Z [32minfo[39m: User JackieChan created
+2024-06-13T17:59:13.024Z [32minfo[39m: User Tendwa deleted
+2024-06-13T18:00:40.225Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-13T18:00:40.240Z [32minfo[39m: Book created

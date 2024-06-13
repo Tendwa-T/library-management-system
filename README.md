@@ -64,6 +64,7 @@ npm run dev
 The server will start on port 3000 by default.
 
 ## API Endpoints
+Some endpoints are protected to ensure only users of the system (Employees of the library) can use them. To access these endpoints, you need to provide a valid token in the Authorization header of the request. The token can be obtained by logging in as a user. Some endpoints are also protected to ensure only admin users can access them. To access these endpoints, you need to provide a valid token in the Authorization header of the request. The token can be obtained by logging in as an admin user.
 
 ### Authors
 
@@ -72,15 +73,19 @@ The server will start on port 3000 by default.
     - Response: An object with data, message and status
 
 - **POST /authors/create**
-    - Description: Create a new user
+    - Description: Create a new user.
     - Body:
         ```json
         {
-          "name": "User Name",
-          "email": "user@example.com"
+            "firstName":"Duffy",
+            "lastName":"Duck"
         }
         ```
     - Response: Created user object
+    - Disclaimer: 
+        - Can only be carried out by a valid user
+        - The user must be an admin user
+
 
 ### Books
 
@@ -93,25 +98,73 @@ The server will start on port 3000 by default.
     - Body:
         ```json
         {
-            "title": "The DEChemist",
-            "authorID": "AU872",
+            "title": "Looney Tunes The Sequel 2",
+            "authorID": "AU-6295",
             "publishedDate": "1988-01-01",
-            "isbn": "9780062315009"
+            "isbn": "9780062315112",
+            "quantity":10
         }
         ```
     - Response: An object with data, message and status
+    - Disclaimer: 
+        - Can only be carried out by a valid user
+        - The authorID must be a valid authorID
 
 ### Loans
 - **GET /loans**
     - Description: Get all Loans
     - Response: An object with data, message and status
 - **POST /loans/create**
-    - Description: Create a new Loan
+    - Description: Create a new Loan.
     - Body:
         ```json
-        Coming soon
+        {
+            "memberID": "MB-379",
+            "bookISBN":"9780062315110"
+        }
         ```
     - Response: An object with data, message and status
+    - Disclaimer: 
+        - Can only be carried out by a valid user
+        - The memberID must be a valid memberID
+        - The bookISBN must be a valid bookISBN
+        - The book must be available
+
+- **PUT /loans/return/**
+    - Description: Return a book
+    - Body:
+        ```json
+        {
+            "loanID":"LN-978",
+            "memberID": "MB-379",
+            "bookISBN":"9780062315110"
+        }
+        ```
+    - Response: An object with data, message and status
+    - Disclaimer: 
+        - Can only be carried out by a valid user
+        - The memberID must be a valid memberID
+        - The bookISBN must be a valid bookISBN
+
+### Members
+- **GET /members**
+    - Description: Get all Members
+    - Response: An object with data, message and status
+- **POST /members/create**
+    - Description: Create a new Member
+    - Body:
+        ```json
+        {
+            "firstName":"Duffy",
+            "lastName":"Duck",
+            "email":"duffy@duck.com",
+            "phone":"0712345678"
+        }
+        ```
+    - Response: An object with data, message and status
+    - Disclaimer: 
+        - Can only be carried out by a valid user
+
 ## Technologies Used
 
 - [Node.js](https://nodejs.org/)

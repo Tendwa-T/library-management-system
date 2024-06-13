@@ -1,6 +1,4 @@
-const Loan = require('../models/loan');
-const Book = require('../models/book');
-const Member = require('../models/member');
+const { Loan, Book, Member } = require('../models/index');
 const logger = require('../utils/logger');
 
 const createLoan = async (req, res) => {
@@ -20,11 +18,11 @@ const createLoan = async (req, res) => {
         if (existingBook.quantity === 0) {
             return res.status(409).json({ data: {}, message: 'Book is out of stock', success: false });
         }
-        const existingLoan = await Loan.findOne({ where: { memberID, isbn: bookISBN } });
+        const existingLoan = await Loan.findOne({ where: { memberID, isbn: bookISBN, loanDate: new Date().toISOString() } });
         if (existingLoan) {
             return res.status(409).json({ data: {}, message: 'Loan already exists', success: false });
         }
-        const newLoan = await Loan.create({ memberID, isbn: bookISBN, loanID: 'LN' + Math.floor(Math.random() * 1000), loanDate: new Date().toISOString(), returned: false, returnedDate: null, dueDate: new Date(new Date().setDate(new Date().getDate() + 14)).toISOString() });
+        const newLoan = await Loan.create({ memberID, isbn: bookISBN, loanID: 'LN-' + Math.floor(Math.random() * 1000), loanDate: new Date().toISOString(), returned: false, returnedDate: null, dueDate: new Date(new Date().setDate(new Date().getDate() + 14)).toISOString() });
         await Book.update({ quantity: existingBook.quantity - 1 }, { where: { isbn: bookISBN } });
         return res.status(201).json({ data: newLoan, message: 'Loan created', success: true });
     } catch (error) {
@@ -35,7 +33,20 @@ const createLoan = async (req, res) => {
 
 const getAllLoans = async (req, res) => {
     try {
-        const loans = await Loan.findAll();
+        const loans = await Loan.findAll({
+            include: [
+                {
+                    model: Member,
+                    required: true,
+                    attributes: ['firstName', 'lastName']
+                },
+                {
+                    model: Book,
+                    required: true,
+                    attributes: ['title']
+                }
+            ]
+        });
         if (loans.length === 0) {
             return res.status(404).json({ data: {}, message: 'No Loans found', success: false });
         }
@@ -86,20 +97,48 @@ const getLoansByBookISBN = async (req, res) => {
     }
 };
 
+const getLoanTableSummary = async (req, res) => {
+
+    try {
+        const loans = await Loan.findAll({
+            include: [
+                {
+                    model: Member,
+                    required: true,
+                    attributes: ['firstName', 'lastName']
+                },
+                {
+                    model: Book,
+                    required: true,
+                    attributes: ['title']
+                }
+            ]
+        });
+        if (loans.length === 0) {
+            return res.status(404).json({ data: {}, message: 'No Loans found', success: false });
+        }
+        return res.status(200).json({ data: loans, message: 'Loans retrieved', success: true });
+    } catch (error) {
+        logger.error(error.message);
+        return res.status(500).json({ data: {}, message: error.message, success: false });
+    }
+
+}
+
 const returnBook = async (req, res) => {
-    const { memberID, bookISBN } = req.body;
-    if (!memberID || memberID === '' || !bookISBN || bookISBN === '') {
-        return res.status(400).json({ data: {}, message: 'Member ID and Book ISBN are required', success: false });
+    const { memberID, bookISBN, loanID } = req.body;
+    if (!memberID || memberID === '' || !bookISBN || bookISBN === '' || !loanID || loanID === '') {
+        return res.status(400).json({ data: {}, message: 'Member ID, LoanID and Book ISBN are required', success: false });
     }
     try {
-        const existingLoan = await Loan.findOne({ where: { memberID, isbn: bookISBN } });
+        const existingLoan = await Loan.findOne({ where: { loanID, memberID, isbn: bookISBN } });
         if (!existingLoan) {
             return res.status(404).json({ data: {}, message: 'Loan does not exist', success: false });
         }
         if (existingLoan.returned) {
             return res.status(409).json({ data: {}, message: 'Book has already been returned', success: false });
         }
-        const updatedLoan = await Loan.update({ returned: true, returnedDate: new Date().toISOString() }, { where: { memberID, isbn: bookISBN } });
+        const updatedLoan = await Loan.update({ returned: true, returnedDate: new Date().toISOString() }, { where: { memberID, loanID, isbn: bookISBN } });
         const existingBook = await Book.findOne({ where: { isbn: bookISBN } });
         await Book.update({ quantity: existingBook.quantity + 1 }, { where: { isbn: bookISBN } });
         return res.status(200).json({ data: updatedLoan, message: 'Book returned', success: true });
@@ -140,6 +179,7 @@ module.exports = {
     getAllLoans,
     getLoanByMemberID,
     getLoansByBookISBN,
+    getLoanTableSummary,
     returnBook,
     deleteLoan,
 };

@@ -1,5 +1,4 @@
-const Book = require('../models/book');
-const Author = require('../models/author');
+const { Author, Book } = require('../models/index');
 const logger = require('../utils/logger');
 
 const createBook = async (req, res) => {
@@ -62,6 +61,24 @@ const getBookByIsbn = async (req, res) => {
     }
 };
 
+const getBookByAuthorID = async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const books = await Book.findAll({
+            where: { authorID: id }
+        });
+        if (books.length === 0) {
+            return res.status(404).json({ data: {}, message: 'No Books found', success: false });
+        }
+        return res.status(200).json({ data: books, message: 'Books retrieved', success: true });
+    }
+    catch (error) {
+        console.log(error.message);
+        return res.status(500).json({ data: {}, message: error.message, success: false });
+    }
+}
+
 const updateBook = async (req, res) => {
     const { isbn } = req.params;
     const { title, authorID, publishedDate } = req.body;
@@ -110,6 +127,7 @@ module.exports = {
     createBook,
     getAllBooks,
     getBookByIsbn,
+    getBookByAuthorID,
     updateBook,
     deleteBook,
 };

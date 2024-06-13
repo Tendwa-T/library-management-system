@@ -4,7 +4,7 @@
   "description": "A backend service for a library management system built using Nodejs and Express",
   "main": "server.js",
   "scripts": {
-    "test": "jest --detectOpenHandles",
+    "test": "set NODE_ENV=test && jest",
     "dev": "nodemon server.js"
   },
   "author": "Tirus Tendwa",

@@ -1,4 +1,4 @@
-const Member = require('../models/member');
+const { Member, Book, Loan } = require('../models/index');
 const logger = require('../utils/logger');
 
 const nameRegex = /^[a-zA-Z0-9]+$/;
@@ -17,7 +17,7 @@ const createMember = async (req, res) => {
         if (existingMember) {
             return res.status(409).json({ data: {}, message: 'Member already exists', success: false });
         }
-        const newMember = await Member.create({ firstName, lastName, email, phoneNumber, memberID: 'MB' + Math.floor(Math.random() * 1000) });
+        const newMember = await Member.create({ firstName, lastName, email, phoneNumber, memberID: 'MB-' + Math.floor(Math.random() * 1000) });
         return res.status(201).json({ data: newMember, message: 'Member created', success: true });
     } catch (error) {
         logger.error(error.message);
@@ -27,7 +27,18 @@ const createMember = async (req, res) => {
 
 const getAllMembers = async (req, res) => {
     try {
-        const members = await Member.findAll();
+        const members = await Member.findAll({
+            include: {
+                model: Loan,
+                required: false,
+                attributes: ['loanID', 'loanDate', 'dueDate', 'returned', 'returnedDate'],
+                include: {
+                    model: Book,
+                    required: true,
+                    attributes: ['title', 'isbn']
+                }
+            }
+        });
         if (members.length === 0) {
             return res.status(404).json({ data: {}, message: 'No Members found', success: false });
         }

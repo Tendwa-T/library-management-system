@@ -7,3 +7,67 @@
 2024-06-12T23:09:44.474Z [31merror[39m: column Loan.bookISBN does not exist
 2024-06-12T23:44:01.936Z [31merror[39m: column "bookISBN" does not exist
 2024-06-12T23:54:38.041Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:09:15.416Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:09:40.528Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:09:54.632Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:10:07.755Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:12:24.396Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:13:47.794Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:17:30.265Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:18:31.318Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:19:11.383Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T00:19:16.864Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:23:40.318Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T00:38:50.182Z [31merror[39m: notNull Violation: Author.authorID cannot be null
+2024-06-13T09:38:36.300Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T09:38:42.760Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T11:26:16.329Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T11:26:21.966Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T11:27:05.400Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T11:27:19.898Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T11:35:16.724Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T11:57:02.447Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T11:57:05.387Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T11:57:12.126Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T11:57:14.878Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T11:58:37.132Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T11:58:40.992Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T11:58:52.791Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T11:58:56.110Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T11:59:21.432Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T11:59:24.194Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T11:59:36.231Z [31merror[39m: Member is not associated to Loan!
+2024-06-13T12:04:01.257Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:04:04.160Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:07:10.707Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:07:14.853Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:07:28.850Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:07:30.194Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:09:18.678Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:09:19.633Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:09:43.828Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:09:46.586Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:10:28.864Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:10:30.178Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:10:38.633Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:10:40.044Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:10:55.439Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:10:56.211Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:11:49.694Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:11:50.591Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:13:43.878Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:13:45.191Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:13:57.670Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:13:58.592Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:14:32.620Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:14:33.571Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:15:31.999Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:15:37.116Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:15:41.739Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:15:45.505Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:19:56.518Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:20:00.398Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:31:14.500Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-13T12:31:17.411Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
+2024-06-13T12:59:31.270Z [31merror[39m: Validation error
+2024-06-13T17:56:45.747Z [31merror[39m: Unauthorized access request by JackieChan

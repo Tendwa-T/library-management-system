@@ -24,6 +24,22 @@ const mockBook = {
     quantity: 10
 };
 
+const mockBook2 = {
+    title: "The Chemist",
+    authorID: 'AU239',
+    publishedDate: "1988-01-01",
+    isbn: "97800623150100",
+    quantity: 10
+};
+
+const mockBook3 = {
+    title: "The SChemist",
+    authorID: 'AU239',
+    publishedDate: "1988-01-01",
+    isbn: "9780062315107",
+    quantity: 10
+};
+
 const mockAuthor = {
     firstName: "Paulo",
     lastName: "Coelho",
@@ -32,7 +48,30 @@ const mockAuthor = {
 
 
 // Test to get all books
-describe('GET /', () => {
+describe('Book Endpoints', () => {
+    let token;
+    let book;
+    let book2;
+    let book3;
+
+
+    beforeAll(async () => {
+        await sequelize.sync({ force: true });
+        const user = await User.create(mockUser);
+        const author = await Author.create(mockAuthor);
+        console.log(author);
+        mockBook.authorID = author.authorID;
+        mockBook2.authorID = author.authorID;
+        mockBook3.authorID = author.authorID;
+        token = generateToken(user);
+        book = await Book.create(mockBook);
+    });
+
+    afterAll(async () => {
+        await sequelize.close();
+    });
+
+
     it('should get all books', async () => {
         const response = await request(app)
             .get('/books/')
@@ -43,31 +82,14 @@ describe('GET /', () => {
         console.log(response.body);
     });
 
-});
-
-
-// Test to Create a Book
-describe('POST /create', () => {
-    let token;
-
-    beforeAll(async () => {
-        await sequelize.sync({ force: true });
-
-        const user = await User.create(mockUser);
-        const author = await Author.create(mockAuthor);
-        console.log(author);
-        mockBook.authorID = author.authorID;
-
-        token = generateToken(user);
-    })
     it('should create a new book', async () => {
         const response = await request(app)
             .post('/books/create')
             .set('Authorization', `${token}`)
-            .send(mockBook)
+            .send(mockBook2)
             .expect(201)
             .expect((res) => {
-                expect(res.body.data.title).toEqual(mockBook.title);
+                expect(res.body.data.title).toEqual(mockBook2.title);
 
             });
         logger.info(response.body);
@@ -75,7 +97,6 @@ describe('POST /create', () => {
     });
 
     it('should return a 409 if the book already exists', async () => {
-        await Book.create(mockBook);
         const response = await request(app)
             .post('/books/create')
             .set('Authorization', `${token}`)
@@ -144,40 +165,18 @@ describe('POST /create', () => {
     });
 
     it('should return 404 if author does not exist', async () => {
-        mockBook.authorID = 'AU01';
+        mockBook2.authorID = 'AU01';
 
         const response = await request(app)
             .post('/books/create')
             .set('Authorization', `${token}`)
-            .send(mockBook)
+            .send(mockBook2)
             .expect(404)
             .expect((res) => {
-                expect(res.body.message).toEqual(`Author with the authorID: ${mockBook.authorID} does not exist`);
+                expect(res.body.message).toEqual(`Author with the authorID: ${mockBook2.authorID} does not exist`);
             });
         console.log(response.body);
     });
-
-
-
-
-});
-
-
-// Test to get Book by ID / ISBN
-describe('GET /:isbn', () => {
-    let book;
-
-    beforeAll(async () => {
-        await sequelize.sync({ force: true });
-
-        const user = await User.create(mockUser);
-        const author = await Author.create(mockAuthor);
-        mockBook.authorID = author.authorID;
-        book = await Book.create(mockBook);
-
-        token = generateToken(user);
-    })
-
 
     it('should return a book with the specified ISBN', async () => {
         const response = await request(app)
@@ -199,28 +198,8 @@ describe('GET /:isbn', () => {
         console.log(response.body);
     });
 
-});
-
-// Test to Update a Book
-describe('PUT /:isbn', () => {
-
-    let token;
-    let book;
-
-    beforeAll(async () => {
-        await sequelize.sync({ force: true });
-
-        const user = await User.create(mockUser);
-        const author = await Author.create(mockAuthor);
-        mockBook.authorID = author.authorID;
-        book = await Book.create(mockBook);
-
-        token = generateToken(user);
-    })
-
-
     it('should update a book with the specified ISBN', async () => {
-
+        mockBook.title = "The Alchemist 2";
         const response = await request(app)
             .put(`/books/${book.isbn}`)
             .set('Authorization', `${token}`)
@@ -288,26 +267,6 @@ describe('PUT /:isbn', () => {
         console.log(response.body);
     });
 
-
-});
-
-
-// Test to Delete a Book
-describe('DELETE /:isbn', () => {
-    let token;
-    let book;
-
-    beforeAll(async () => {
-        await sequelize.sync({ force: true });
-
-        const user = await User.create(mockUser);
-        const author = await Author.create(mockAuthor);
-        mockBook.authorID = author.authorID;
-        book = await Book.create(mockBook);
-
-        token = generateToken(user);
-    })
-
     it('should delete a book with the specified ID', async () => {
         const response = await request(app)
             .delete(`/books/${book.isbn}`)
@@ -332,4 +291,4 @@ describe('DELETE /:isbn', () => {
         console.log(response.body);
     });
 
-})
+});

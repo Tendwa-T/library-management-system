@@ -11,6 +11,16 @@ const mockAuthor = {
     authorID: "AU035"
 };
 
+const mockAuthor2 = {
+    firstName: "Jane",
+    lastName: "Doe",
+}
+
+const mockAuthor3 = {
+    firstName: "Max",
+    lastName: "Payne",
+}
+
 const mockUser = {
     firstName: "Tirus",
     lastName: "Tendwa",
@@ -22,12 +32,19 @@ const mockUser = {
 
 // Test to Create an Author
 
-describe('POST /create', () => {
+describe('Author EndPoint', () => {
     let token;
+    let author;
+
     beforeAll(async () => {
         await sequelize.sync({ force: true });
         const user = await User.create(mockUser);
         token = generateToken(user);
+        author = await Author.create(mockAuthor);
+    });
+
+    afterAll(async () => {
+        await sequelize.close();
     });
 
     it('should create a new Author', async () => {
@@ -35,17 +52,15 @@ describe('POST /create', () => {
         const response = await request(app)
             .post('/authors/create')
             .set('Authorization', `${token}`)
-            .send(mockAuthor)
+            .send(mockAuthor2)
             .expect(201)
             .expect((res) => {
-                expect(res.body.data.firstName).toEqual(mockAuthor.firstName);
+                expect(res.body.data.firstName).toEqual(mockAuthor2.firstName);
             });
         console.log(response.body);
     });
 
     it('should return a 409 if the author already exists', async () => {
-        await Author.create(mockAuthor);
-
         const response = await request(app)
             .post('/authors/create')
             .set('Authorization', `${token}`)
@@ -71,12 +86,6 @@ describe('POST /create', () => {
         console.log(response.body);
     });
 
-
-});
-
-// Test to get all authors
-
-describe('GET /', () => {
     it('should get all authors', async () => {
         const response = await request(app)
             .get('/authors/')
@@ -87,15 +96,9 @@ describe('GET /', () => {
         console.log(response.body);
     });
 
-});
-
-// Test to get Author by ID
-describe('GET /:id', () => {
-    beforeAll(async () => {
-        await sequelize.sync({ force: true });
-    });
     it('should return a user with the specified ID', async () => {
-        const author = await Author.create(mockAuthor);
+        mockAuthor3.authorID = "AU-086"
+        const author = await Author.create(mockAuthor3);
         const response = await request(app)
             .get(`/authors/${author.authorID}`)
             .expect(200)
@@ -105,29 +108,15 @@ describe('GET /:id', () => {
         console.log(response.body);
     });
 
-
-});
-
-
-// Test to Update an Author
-
-describe('PUT /:id', () => {
-    let token;
-
-    beforeAll(async () => {
-        await sequelize.sync({ force: true });
-        const user = await User.create(mockUser);
-        token = generateToken(user);
-    });
-
     it('should update an author with the specified ID', async () => {
-        const author = await Author.create(mockAuthor);
-        mockAuthor.firstName = "Jane";
+        mockAuthor2.authorID = "AU-100";
+        const author = await Author.create(mockAuthor2);
+        mockAuthor2.firstName = "Jane";
 
         const response = await request(app)
             .put(`/authors/${author.authorID}`)
             .set('Authorization', `${token}`)
-            .send(mockAuthor)
+            .send(mockAuthor2)
             .expect(200)
             .expect((res) => {
                 expect(res.body.data).toEqual(expect.any(Object));
@@ -166,22 +155,6 @@ describe('PUT /:id', () => {
         console.log(response.body);
     });
 
-
-});
-
-// Test to Delete an Author
-
-describe('DELETE /:id', () => {
-    let token;
-    let author;
-
-    beforeAll(async () => {
-        await sequelize.sync({ force: true });
-        const user = await User.create(mockUser);
-        token = generateToken(user);
-        author = await Author.create(mockAuthor);
-    });
-
     it('should delete an author with the specified ID', async () => {
         const response = await request(app)
             .delete(`/authors/${author.authorID}`)
@@ -205,5 +178,3 @@ describe('DELETE /:id', () => {
     });
 
 });
-
-
