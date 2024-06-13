@@ -1,24 +1,44 @@
 const request = require('supertest');
 const app = require('../app');
+const { generateToken } = require('../middleware/auth');
+const sequelize = require('../config/database');
+const User = require('../models/user');
+const Book = require('../models/book');
+const Author = require('../models/author');
+const logger = require('../utils/logger')
+
+const mockUser = {
+    firstName: "Tirus",
+    lastName: "Tendwa",
+    email: "tendwa@admin.com",
+    username: "Tendwa",
+    password: "admin",
+    isAdmin: true
+}
+
+const mockBook = {
+    title: "The Alchemist",
+    authorID: 'AU239',
+    publishedDate: "1988-01-01",
+    isbn: "9780062315007",
+    quantity: 10
+};
+
+const mockAuthor = {
+    firstName: "Paulo",
+    lastName: "Coelho",
+    authorID: 'AU' + Math.floor(Math.random() * 1000)
+}
+
 
 // Test to get all books
 describe('GET /', () => {
     it('should get all books', async () => {
         const response = await request(app)
-            .get('/book/')
+            .get('/books/')
             .expect(200)
             .expect((res) => {
                 expect(res.body.data).toEqual(expect.any(Array));
-            });
-        console.log(response.body);
-    });
-
-    it('should return a 404 if no books are found', async () => {
-        const response = await request(app)
-            .get('/book/')
-            .expect(404)
-            .expect((res) => {
-                expect(res.body.message).toEqual('No Books found');
             });
         console.log(response.body);
     });
@@ -28,36 +48,38 @@ describe('GET /', () => {
 
 // Test to Create a Book
 describe('POST /create', () => {
-    it('should create a new book', async () => {
-        const sampleBook = {
-            title: "The Alchemist",
-            authorID: 'AU872',
-            publishedDate: "1988-01-01",
-            isbn: "9780062315007"
-        }
+    let token;
 
+    beforeAll(async () => {
+        await sequelize.sync({ force: true });
+
+        const user = await User.create(mockUser);
+        const author = await Author.create(mockAuthor);
+        console.log(author);
+        mockBook.authorID = author.authorID;
+
+        token = generateToken(user);
+    })
+    it('should create a new book', async () => {
         const response = await request(app)
-            .post('/book/create')
-            .send(sampleBook)
+            .post('/books/create')
+            .set('Authorization', `${token}`)
+            .send(mockBook)
             .expect(201)
             .expect((res) => {
-                expect(res.body.data.title).toEqual(sampleBook.title);
+                expect(res.body.data.title).toEqual(mockBook.title);
 
             });
-        console.log(response.body);
+        logger.info(response.body);
+        console.log("Response body:", response.body);
     });
 
     it('should return a 409 if the book already exists', async () => {
-        const sampleBook = {
-            title: "The Alchemist",
-            authorID: 'AU872',
-            publishedDate: "1988-01-01",
-            isbn: "9780062315007"
-        }
-
+        await Book.create(mockBook);
         const response = await request(app)
-            .post('/book/create')
-            .send(sampleBook)
+            .post('/books/create')
+            .set('Authorization', `${token}`)
+            .send(mockBook)
             .expect(409)
             .expect((res) => {
                 expect(res.body.message).toEqual('Book already exists');
@@ -66,16 +88,12 @@ describe('POST /create', () => {
     });
 
     it('should return a 400 if the book title is not provided', async () => {
-        const sampleBook = {
-            title: "",
-            authorID: 'AU872',
-            publishedDate: "1988-01-01",
-            isbn: "9780062315007"
-        }
+        mockBook.title = "";
 
         const response = await request(app)
-            .post('/book/create')
-            .send(sampleBook)
+            .post('/books/create')
+            .set('Authorization', `${token}`)
+            .send(mockBook)
             .expect(400)
             .expect((res) => {
                 expect(res.body.message).toEqual('All fields are required');
@@ -84,16 +102,12 @@ describe('POST /create', () => {
     });
 
     it('should return a 400 if the book authorID is not provided', async () => {
-        const sampleBook = {
-            title: "The Alchemist",
-            authorID: '',
-            publishedDate: "1988-01-01",
-            isbn: "9780062315007"
-        }
+        mockBook.authorID = "";
 
         const response = await request(app)
-            .post('/book/create')
-            .send(sampleBook)
+            .post('/books/create')
+            .set('Authorization', `${token}`)
+            .send(mockBook)
             .expect(400)
             .expect((res) => {
                 expect(res.body.message).toEqual('All fields are required');
@@ -102,16 +116,12 @@ describe('POST /create', () => {
     });
 
     it('should return a 400 if the book publishedDate is not provided', async () => {
-        const sampleBook = {
-            title: "The Alchemist",
-            authorID: 'AU872',
-            publishedDate: "",
-            isbn: "9780062315007"
-        }
+        mockBook.publishedDate = "";
 
         const response = await request(app)
-            .post('/book/create')
-            .send(sampleBook)
+            .post('/books/create')
+            .set('Authorization', `${token}`)
+            .send(mockBook)
             .expect(400)
             .expect((res) => {
                 expect(res.body.message).toEqual('All fields are required');
@@ -120,16 +130,12 @@ describe('POST /create', () => {
     });
 
     it('should return a 400 if the book isbn is not provided', async () => {
-        const sampleBook = {
-            title: "The Alchemist",
-            authorID: 'AU872',
-            publishedDate: "1988-01-01",
-            isbn: ""
-        }
+        mockBook.isbn = "";
 
         const response = await request(app)
-            .post('/book/create')
-            .send(sampleBook)
+            .post('/books/create')
+            .set('Authorization', `${token}`)
+            .send(mockBook)
             .expect(400)
             .expect((res) => {
                 expect(res.body.message).toEqual('All fields are required');
@@ -138,19 +144,15 @@ describe('POST /create', () => {
     });
 
     it('should return 404 if author does not exist', async () => {
-        const sampleBook = {
-            title: "The Alchemist",
-            authorID: '1',
-            publishedDate: "1988-01-01",
-            isbn: "9780062315007"
-        }
+        mockBook.authorID = 'AU01';
 
         const response = await request(app)
-            .post('/book/create')
-            .send(sampleBook)
+            .post('/books/create')
+            .set('Authorization', `${token}`)
+            .send(mockBook)
             .expect(404)
             .expect((res) => {
-                expect(res.body.message).toEqual(`Author with the authorID: ${sampleBook.authorID} does not exist`);
+                expect(res.body.message).toEqual(`Author with the authorID: ${mockBook.authorID} does not exist`);
             });
         console.log(response.body);
     });
@@ -163,9 +165,23 @@ describe('POST /create', () => {
 
 // Test to get Book by ID / ISBN
 describe('GET /:isbn', () => {
+    let book;
+
+    beforeAll(async () => {
+        await sequelize.sync({ force: true });
+
+        const user = await User.create(mockUser);
+        const author = await Author.create(mockAuthor);
+        mockBook.authorID = author.authorID;
+        book = await Book.create(mockBook);
+
+        token = generateToken(user);
+    })
+
+
     it('should return a book with the specified ISBN', async () => {
         const response = await request(app)
-            .get('/book/9780062315007')
+            .get(`/books/${book.isbn}`)
             .expect(200)
             .expect((res) => {
                 expect(res.body.data.title).toEqual(expect.any(String));
@@ -175,7 +191,7 @@ describe('GET /:isbn', () => {
 
     it('should return a 404 if the book does not exist', async () => {
         const response = await request(app)
-            .get('/book/9780062315008')
+            .get('/books/9780062315008')
             .expect(404)
             .expect((res) => {
                 expect(res.body.message).toEqual('Book with the specified ISBN does not exist');
@@ -187,33 +203,42 @@ describe('GET /:isbn', () => {
 
 // Test to Update a Book
 describe('PUT /:isbn', () => {
+
+    let token;
+    let book;
+
+    beforeAll(async () => {
+        await sequelize.sync({ force: true });
+
+        const user = await User.create(mockUser);
+        const author = await Author.create(mockAuthor);
+        mockBook.authorID = author.authorID;
+        book = await Book.create(mockBook);
+
+        token = generateToken(user);
+    })
+
+
     it('should update a book with the specified ISBN', async () => {
-        const sampleBook = {
-            title: "The Alchemist",
-            authorID: 'AU872',
-            publishedDate: "1988-01-01",
-        };
 
         const response = await request(app)
-            .put('/book/9780062315007')
-            .send(sampleBook)
+            .put(`/books/${book.isbn}`)
+            .set('Authorization', `${token}`)
+            .send(mockBook)
             .expect(200)
             .expect((res) => {
-                expect(res.body.data.title).toEqual(sampleBook.title);
+                expect(res.body.data.title).toEqual(mockBook.title);
             });
         console.log(response.body);
     });
 
     it('should return a 400 if the book title is not provided', async () => {
-        const sampleBook = {
-            title: "",
-            authorID: 'AU872',
-            publishedDate: "1988-01-01",
-        };
+        mockBook.title = "";
 
         const response = await request(app)
-            .put('/book/9780062315007')
-            .send(sampleBook)
+            .put(`/books/${book.isbn}`)
+            .set('Authorization', `${token}`)
+            .send(mockBook)
             .expect(400)
             .expect((res) => {
                 expect(res.body.message).toEqual('All fields are required');
@@ -222,15 +247,12 @@ describe('PUT /:isbn', () => {
     });
 
     it('should return a 400 if the book authorID is not provided', async () => {
-        const sampleBook = {
-            title: "The Alchemist",
-            authorID: '',
-            publishedDate: "1988-01-01",
-        };
+        mockBook.authorID = "";
 
         const response = await request(app)
-            .put('/book/9780062315007')
-            .send(sampleBook)
+            .put(`/books/${book.isbn}`)
+            .set('Authorization', `${token}`)
+            .send(mockBook)
             .expect(400)
             .expect((res) => {
                 expect(res.body.message).toEqual('All fields are required');
@@ -239,15 +261,12 @@ describe('PUT /:isbn', () => {
     });
 
     it('should return a 400 if the book publishedDate is not provided', async () => {
-        const sampleBook = {
-            title: "The Alchemist",
-            authorID: 'AU872',
-            publishedDate: "",
-        };
+        mockBook.publishedDate = "";
 
         const response = await request(app)
-            .put('/book/9780062315007')
-            .send(sampleBook)
+            .put(`/books/${book.isbn}`)
+            .set('Authorization', `${token}`)
+            .send(mockBook)
             .expect(400)
             .expect((res) => {
                 expect(res.body.message).toEqual('All fields are required');
@@ -256,15 +275,12 @@ describe('PUT /:isbn', () => {
     });
 
     it('should return a 404 if the book does not exist', async () => {
-        const sampleBook = {
-            title: "The Alchemist",
-            authorID: 'AU872',
-            publishedDate: "1988-01-01",
-        };
+        mockBook.isbn = "9780062315008";
 
         const response = await request(app)
-            .put('/book/9780062315008')
-            .send(sampleBook)
+            .put(`/books/${mockBook.isbn}`)
+            .set('Authorization', `${token}`)
+            .send(mockBook)
             .expect(404)
             .expect((res) => {
                 expect(res.body.message).toEqual('Book with the specified ISBN does not exist');
@@ -278,9 +294,24 @@ describe('PUT /:isbn', () => {
 
 // Test to Delete a Book
 describe('DELETE /:isbn', () => {
+    let token;
+    let book;
+
+    beforeAll(async () => {
+        await sequelize.sync({ force: true });
+
+        const user = await User.create(mockUser);
+        const author = await Author.create(mockAuthor);
+        mockBook.authorID = author.authorID;
+        book = await Book.create(mockBook);
+
+        token = generateToken(user);
+    })
+
     it('should delete a book with the specified ID', async () => {
         const response = await request(app)
-            .delete('/book/9780062315007')
+            .delete(`/books/${book.isbn}`)
+            .set('Authorization', `${token}`)
             .expect(200)
             .expect((res) => {
                 expect(res.body.message).toEqual('Book deleted');
@@ -290,8 +321,10 @@ describe('DELETE /:isbn', () => {
     });
 
     it('should return a 404 if the book does not exist', async () => {
+
         const response = await request(app)
-            .delete('/book/9780062315007')
+            .delete('/books/9780062315100')
+            .set('Authorization', `${token}`)
             .expect(404)
             .expect((res) => {
                 expect(res.body.message).toEqual('Book with the specified ISBN does not exist');

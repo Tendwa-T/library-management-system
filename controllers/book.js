@@ -1,9 +1,18 @@
 const Book = require('../models/book');
 const Author = require('../models/author');
+const logger = require('../utils/logger');
 
 const createBook = async (req, res) => {
-    const { title, authorID, isbn, publishedDate } = req.body;
-    if (!title || title === '' || !authorID || authorID === '' || !isbn || isbn === '' || !publishedDate || publishedDate === '') {
+    const { title, authorID, isbn, publishedDate, quantity } = req.body;
+    const { username, isAdmin } = req.user;
+
+    if (!isAdmin) {
+        logger.warn(`Unauthorized attempt to create book by ${username}`);
+        return res.status(403).json({ data: {}, message: 'Unauthorized', success: false });
+    }
+
+
+    if (!title || title === '' || !authorID || authorID === '' || !isbn || isbn === '' || !publishedDate || publishedDate === '' || !quantity || quantity === '') {
         return res.status(400).json({ data: {}, message: 'All fields are required', success: false });
     }
 
@@ -17,7 +26,8 @@ const createBook = async (req, res) => {
         if (existingBook) {
             return res.status(409).json({ data: {}, message: 'Book already exists', success: false });
         }
-        const newBook = await Book.create({ title, authorID, isbn, publishedDate });
+        const newBook = await Book.create({ title, authorID, isbn, publishedDate, quantity });
+        logger.info(`Book ${newBook.title} created by ${username}`);
         return res.status(201).json({ data: newBook, message: 'Book created', success: true });
     } catch (error) {
         return res.status(500).json({ data: {}, message: error.message, success: false });
@@ -76,6 +86,13 @@ const updateBook = async (req, res) => {
 
 const deleteBook = async (req, res) => {
     const { isbn } = req.params;
+    const { username, isAdmin } = req.user;
+
+    if (!isAdmin) {
+        logger.warn(`Unauthorized attempt to delete book by ${username}`);
+        return res.status(403).json({ data: {}, message: 'Unauthorized', success: false });
+    }
+
     try {
         const deleted = await Book.destroy({
             where: { isbn }

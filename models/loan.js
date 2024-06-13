@@ -1,26 +1,58 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class Loan extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/database');
+
+const Loan = sequelize.define('Loan',
+  {
+    loanID: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      primaryKey: true,
+      unique: true,
+    },
+    isbn: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      references: {
+        model: 'Books',
+        key: 'isbn',
+      },
+    },
+    memberID: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      references: {
+        model: 'Members',
+        key: 'memberID',
+      },
+    },
+    loanDate: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
+    dueDate: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
+    returned: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
+    },
+    returnedDate: {
+      type: DataTypes.DATE,
+    },
   }
-  Loan.init({
-    bookId: DataTypes.INTEGER,
-    userId: DataTypes.INTEGER,
-    loanDate: DataTypes.DATE,
-    returnDate: DataTypes.DATE
-  }, {
-    sequelize,
-    modelName: 'Loan',
+);
+
+Loan.associations = (models) => {
+  Loan.belongsTo(models.Member, {
+    foreignKey: 'memberID',
   });
-  return Loan;
-};
+  Loan.belongsTo(models.Book, {
+    foreignKey: 'isbn',
+  });
+}
+
+Loan.sync({ alter: true });
+
+module.exports = Loan;

@@ -1,56 +1,55 @@
 const request = require('supertest');
 const app = require('../app');
-// Test to get all authors
+const User = require('../models/user');
+const Author = require('../models/author');
+const sequelize = require('../config/database');
+const { generateToken } = require('../middleware/auth');
 
-describe('GET /', () => {
-    it('should get all authors', async () => {
-        const response = await request(app)
-            .get('/author/')
-            .expect(200)
-            .expect((res) => {
-                expect(res.body.data).toEqual(expect.any(Array));
-            });
-        console.log(response.body);
-    });
+const mockAuthor = {
+    firstName: "John",
+    lastName: "Doe",
+    authorID: "AU035"
+};
 
-    it('should return a 404 if no authors are found', async () => {
-        const response = await request(app)
-            .get('/author/')
-            .expect(404)
-            .expect((res) => {
-                expect(res.body.message).toEqual('No Authors found');
-            });
-        console.log(response.body);
-    });
-
-});
+const mockUser = {
+    firstName: "Tirus",
+    lastName: "Tendwa",
+    email: "tendwa@admin.com",
+    username: "Tendwa",
+    password: "admin",
+    isAdmin: true
+}
 
 // Test to Create an Author
 
 describe('POST /create', () => {
+    let token;
+    beforeAll(async () => {
+        await sequelize.sync({ force: true });
+        const user = await User.create(mockUser);
+        token = generateToken(user);
+    });
+
     it('should create a new Author', async () => {
-        const sampleAuthor = {
-            name: "John Cena",
-        };
 
         const response = await request(app)
-            .post('/author/create')
-            .send(sampleAuthor)
+            .post('/authors/create')
+            .set('Authorization', `${token}`)
+            .send(mockAuthor)
             .expect(201)
             .expect((res) => {
-                expect(res.body.data.name).toEqual(sampleAuthor.name);
+                expect(res.body.data.firstName).toEqual(mockAuthor.firstName);
             });
         console.log(response.body);
     });
 
     it('should return a 409 if the author already exists', async () => {
-        const sampleAuthor = {
-            name: "John Cena",
-        };
+        await Author.create(mockAuthor);
 
         const response = await request(app)
-            .post('/author/create')
-            .send(sampleAuthor)
+            .post('/authors/create')
+            .set('Authorization', `${token}`)
+            .send(mockAuthor)
             .expect(409)
             .expect((res) => {
                 expect(res.body.message).toEqual('Author already exists');
@@ -59,16 +58,15 @@ describe('POST /create', () => {
     });
 
     it('should return a 400 if the author name is not provided', async () => {
-        const sampleAuthor = {
-            name: "",
-        };
+        mockAuthor.firstName = "";
 
         const response = await request(app)
-            .post('/author/create')
-            .send(sampleAuthor)
+            .post('/authors/create')
+            .set('Authorization', `${token}`)
+            .send(mockAuthor)
             .expect(400)
             .expect((res) => {
-                expect(res.body.message).toEqual('Name is required');
+                expect(res.body.message).toEqual('All fields are required');
             });
         console.log(response.body);
     });
@@ -76,27 +74,37 @@ describe('POST /create', () => {
 
 });
 
-// Test to get Author by ID
-describe('GET /:id', () => {
-    it('should return a user with the specified ID', async () => {
+// Test to get all authors
+
+describe('GET /', () => {
+    it('should get all authors', async () => {
         const response = await request(app)
-            .get('/author/AU673')
+            .get('/authors/')
             .expect(200)
             .expect((res) => {
-                expect(res.body.data.name).toEqual(expect.any(String));
+                expect(res.body.data).toEqual(expect.any(Array));
             });
         console.log(response.body);
     });
 
-    it('should return a 404 if the author does not exist', async () => {
+});
+
+// Test to get Author by ID
+describe('GET /:id', () => {
+    beforeAll(async () => {
+        await sequelize.sync({ force: true });
+    });
+    it('should return a user with the specified ID', async () => {
+        const author = await Author.create(mockAuthor);
         const response = await request(app)
-            .get('/author/AU1000')
-            .expect(404)
+            .get(`/authors/${author.authorID}`)
+            .expect(200)
             .expect((res) => {
-                expect(res.body.message).toEqual('Author with the specified ID does not exist');
+                expect(res.body.data.firstName).toEqual(expect.any(String));
             });
         console.log(response.body);
     });
+
 
 });
 
@@ -104,30 +112,40 @@ describe('GET /:id', () => {
 // Test to Update an Author
 
 describe('PUT /:id', () => {
+    let token;
+
+    beforeAll(async () => {
+        await sequelize.sync({ force: true });
+        const user = await User.create(mockUser);
+        token = generateToken(user);
+    });
+
     it('should update an author with the specified ID', async () => {
-        const sampleAuthor = {
-            name: "John Doe",
-        };
+        const author = await Author.create(mockAuthor);
+        mockAuthor.firstName = "Jane";
 
         const response = await request(app)
-            .put('/author/AU673')
-            .send(sampleAuthor)
+            .put(`/authors/${author.authorID}`)
+            .set('Authorization', `${token}`)
+            .send(mockAuthor)
             .expect(200)
             .expect((res) => {
-                expect(res.body.data.name).toEqual(sampleAuthor.name);
+                expect(res.body.data).toEqual(expect.any(Object));
+                expect(res.body.message).toEqual('Author updated');
             });
         console.log(response.body);
     });
 
-    it('should return a 500 if the author does not exist', async () => {
+    it('should return a 404 if the author does not exist', async () => {
         const sampleAuthor = {
-            name: "John Doe",
+            firstName: "John",
+            lastName: "Xamarin",
         };
-
         const response = await request(app)
-            .put('/author/AU1000')
+            .put('/authors/AU1000')
+            .set('Authorization', `${token}`)
             .send(sampleAuthor)
-            .expect(500)
+            .expect(404)
             .expect((res) => {
                 expect(res.body.message).toEqual('Author not found');
             });
@@ -135,16 +153,15 @@ describe('PUT /:id', () => {
     });
 
     it('should return a 400 if the author name is not provided', async () => {
-        const sampleAuthor = {
-            name: "",
-        };
+        mockAuthor.firstName = "";
 
         const response = await request(app)
-            .put('/author/AU673')
-            .send(sampleAuthor)
+            .put(`/authors/${mockAuthor.authorID}`)
+            .set('Authorization', `${token}`)
+            .send(mockAuthor)
             .expect(400)
             .expect((res) => {
-                expect(res.body.message).toEqual('Name is required');
+                expect(res.body.message).toEqual('All fields are required');
             });
         console.log(response.body);
     });
@@ -155,9 +172,20 @@ describe('PUT /:id', () => {
 // Test to Delete an Author
 
 describe('DELETE /:id', () => {
+    let token;
+    let author;
+
+    beforeAll(async () => {
+        await sequelize.sync({ force: true });
+        const user = await User.create(mockUser);
+        token = generateToken(user);
+        author = await Author.create(mockAuthor);
+    });
+
     it('should delete an author with the specified ID', async () => {
         const response = await request(app)
-            .delete('/author/AU673')
+            .delete(`/authors/${author.authorID}`)
+            .set('Authorization', `${token}`)
             .expect(202)
             .expect((res) => {
                 expect(res.body.message).toEqual('Author deleted');
@@ -165,10 +193,11 @@ describe('DELETE /:id', () => {
         console.log(response.body);
     });
 
-    it('should return a 500 if the author does not exist', async () => {
+    it('should return a 404 if the author does not exist', async () => {
         const response = await request(app)
-            .delete('/author/AU1000')
-            .expect(500)
+            .delete('/authors/AU1000')
+            .set('Authorization', `${token}`)
+            .expect(404)
             .expect((res) => {
                 expect(res.body.message).toEqual('Author not found');
             });
@@ -177,5 +206,4 @@ describe('DELETE /:id', () => {
 
 });
 
-// TODO: Add a test to Ensure user validation before creation of an author
 

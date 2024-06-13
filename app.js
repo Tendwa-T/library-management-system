@@ -5,14 +5,20 @@ const app = express();
 
 const authorRouter = require('./routes/author');
 const bookRouter = require('./routes/book');
+const loanRouter = require('./routes/loan');
+const memberRouter = require('./routes/member');
+const userRouter = require('./routes/user');
 
-const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/author', authorRouter);
-app.use('/book', bookRouter);
+app.use('/authors', authorRouter);
+app.use('/books', bookRouter);
+app.use('/loans', loanRouter);
+app.use('/members', memberRouter);
+app.use('/users', userRouter);
+
 
 app.get('/', (req, res) => {
     res.send('API Online');

@@ -1,0 +1,9 @@
+2024-06-12T22:19:19.178Z [31merror[39m: Author not found
+2024-06-12T22:45:42.006Z [31merror[39m: address is not defined
+2024-06-12T22:52:43.522Z [31merror[39m: column Book.ISBN does not exist
+2024-06-12T22:53:47.024Z [31merror[39m: column Book.ISBN does not exist
+2024-06-12T22:55:31.139Z [31merror[39m: column Loan.bookISBN does not exist
+2024-06-12T23:07:50.677Z [31merror[39m: column Loan.bookISBN does not exist
+2024-06-12T23:09:44.474Z [31merror[39m: column Loan.bookISBN does not exist
+2024-06-12T23:44:01.936Z [31merror[39m: column "bookISBN" does not exist
+2024-06-12T23:54:38.041Z [31merror[39m: Unauthorized access request by JackieChan
