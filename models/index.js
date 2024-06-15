@@ -11,6 +11,7 @@ Author = require('./author');
 
 Author.hasMany(Book, { foreignKey: 'authorID' });
 Book.hasMany(Loan, { foreignKey: 'isbn' });
+Book.belongsTo(Author, { foreignKey: 'authorID' });
 Loan.belongsTo(Book, { foreignKey: 'isbn' });
 Loan.belongsTo(Member, { foreignKey: 'memberID' });
 Member.hasMany(Loan, { foreignKey: 'memberID' });

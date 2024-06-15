@@ -34,6 +34,5 @@ const User = sequelize.define('User',
   }
 );
 
-User.sync({ alter: true });
 
 module.exports = User;

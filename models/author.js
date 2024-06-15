@@ -21,6 +21,5 @@ const Author = sequelize.define('Author',
   },
 
 );
-Author.sync({ alter: true });
 
 module.exports = Author;

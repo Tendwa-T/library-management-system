@@ -21,6 +21,10 @@ const Book = sequelize.define('Book',
       primaryKey: true,
       unique: true,
     },
+    bookImage: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     publishedDate: {
       type: DataTypes.DATE,
       allowNull: false,
@@ -29,17 +33,9 @@ const Book = sequelize.define('Book',
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-  });
+  }
+);
 
-Book.associations = (models) => {
-  Book.belongsTo(models.Author, {
-    foreignKey: 'author',
-  });
-  Book.hasMany(models.Loan, {
-    foreignKey: 'isbn',
-  });
-}
 
-Book.sync({ alter: true, });
 
 module.exports = Book;

@@ -823,3 +823,43 @@
 2024-06-13T17:59:13.024Z [32minfo[39m: User Tendwa deleted
 2024-06-13T18:00:40.225Z [32minfo[39m: Book The Chemist created by Tendwa
 2024-06-13T18:00:40.240Z [32minfo[39m: Book created
+2024-06-14T12:02:16.835Z [32minfo[39m: Server running on port 8000
+2024-06-14T12:02:23.271Z [32minfo[39m: User Spiderman created
+2024-06-14T12:09:21.836Z [32minfo[39m: User Tendwa created
+2024-06-14T12:09:28.499Z [32minfo[39m: User Tendwa logged in
+2024-06-14T12:10:24.413Z [32minfo[39m: User Tendwa logged in
+2024-06-14T12:11:07.281Z [32minfo[39m: User Tendwa logged in
+2024-06-14T12:59:09.662Z [32minfo[39m: User Tendwa logged in
+2024-06-15T12:59:04.416Z [32minfo[39m: Server running on port 8000
+2024-06-15T14:58:05.047Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-15T14:58:05.096Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-15T14:58:05.120Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-15T14:58:05.336Z [32minfo[39m: Loan with Member ID MB-74 and Book ISBN 9780062315080 deleted by Tendwa
+2024-06-15T14:58:05.345Z [32minfo[39m: Loan with Member ID MB-74 and Book ISBN 9780062315090 deleted by Tendwa
+2024-06-15T14:58:43.922Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-15T14:58:43.930Z [32minfo[39m: Book created
+2024-06-15T14:58:56.878Z [32minfo[39m: Author with ID AU035 deleted by Tendwa
+2024-06-15T14:59:08.958Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-15T15:00:56.225Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-15T15:01:05.571Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-15T15:01:14.745Z [31merror[39m: relation "Users" does not exist
+2024-06-15T15:01:14.813Z [31merror[39m: relation "Users" does not exist
+2024-06-15T15:01:15.003Z [32minfo[39m: User Tendwa updated
+2024-06-15T15:01:15.007Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-15T15:01:15.014Z [32minfo[39m: Book created
+2024-06-15T15:01:15.029Z [32minfo[39m: User Tendwa deleted
+2024-06-15T15:04:17.698Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-15T15:04:24.793Z [32minfo[39m: Book The MAtchchemist created by Tendwa
+2024-06-15T15:04:24.830Z [32minfo[39m: Book The PEchemist created by Tendwa
+2024-06-15T15:04:24.863Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-15T15:04:25.098Z [32minfo[39m: Loan with Member ID MB-496 and Book ISBN 9780062315080 deleted by Tendwa
+2024-06-15T15:04:25.106Z [32minfo[39m: Loan with Member ID MB-496 and Book ISBN 9780062315090 deleted by Tendwa
+2024-06-15T15:04:42.908Z [32minfo[39m: Server running on port 8000
+2024-06-15T15:08:21.444Z [32minfo[39m: Server running on port 8000
+2024-06-15T15:08:24.629Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-15T15:08:24.634Z [32minfo[39m: Book created
+2024-06-15T15:08:49.174Z [32minfo[39m: Server running on port 8000
+2024-06-15T15:08:52.281Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-15T15:09:01.710Z [32minfo[39m: Server running on port 8000
+2024-06-15T15:09:04.510Z [32minfo[39m: Book The Chemist created by Tendwa
+2024-06-15T15:09:04.521Z [32minfo[39m: Book created

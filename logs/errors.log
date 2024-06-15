@@ -71,3 +71,10 @@
 2024-06-13T12:31:17.411Z [31merror[39m: ConnectionManager.getConnection was called after the connection manager was closed!
 2024-06-13T12:59:31.270Z [31merror[39m: Validation error
 2024-06-13T17:56:45.747Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-15T14:59:08.958Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-15T15:00:56.225Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-15T15:01:05.571Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-15T15:01:14.745Z [31merror[39m: relation "Users" does not exist
+2024-06-15T15:01:14.813Z [31merror[39m: relation "Users" does not exist
+2024-06-15T15:04:17.698Z [31merror[39m: Unauthorized access request by JackieChan
+2024-06-15T15:08:52.281Z [31merror[39m: Unauthorized access request by JackieChan
